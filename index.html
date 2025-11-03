@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stellantis - Innovative Vehicles</title>
+    <title>PUM - Agent Commercial</title>
     <style>
         /* Reset and base styles */
         * {
@@ -351,32 +351,32 @@
 <body>
     <nav>
         <div class="nav-container">
-            <a href="#" class="logo">Stellantis</a>
+            <a href="#" class="logo">PUM</a>
             <ul class="nav-links">
-                <li><a href="#">Vehicles</a></li>
-                <li><a href="#">Build Your Own</a></li>
-                <li><a href="#">Shopping Tools</a></li>
-                <li><a href="#" style="color: #3d9970;">Customer Service Portal</a></li>
+                <li><a href="#">Catalogue</a></li>
+                <li><a href="#">Configurateur</a></li>
+                <li><a href="#">Assistance</a></li>
+                <li><a href="#" style="color: #3d9970;">Portail Service</a></li>
             </ul>
             <div class="nav-right">
-                <a href="#">Find a Dealer</a>
-                <a href="#">Login</a>
-                <a href="#">Search</a>
+                <a href="#">Trouver un agence</a>
+                <a href="#">Connexion</a>
+                <a href="#">Recherche</a>
             </div>
         </div>
     </nav>
 
     <section class="hero">
         <div class="hero-content">
-            <h1>Stellantis Customer Service Portal</h1><h2>Experience Electric Innovation</h2>
-            <p>Empowering dealerships to sell cutting-edge electric vehicles to customers.</p>
+            <h1>Portail Interne PUM</h1><h2>Des services 100% connectés</h2>
+            <p>Négoce-partenaire de services et solutions innovantes en matériaux de synthèse aux entreprises du Bâtiment, des Travaux Publics et de l’aménagement extérieur..</p>
             <a href="#" class="cta-button">Explore Our Models</a>
         </div>
     </section>
 
     <div class="dealer-section">
         <ul class="dealer-links">
-            <li><a href="#">Inventory</a></li>
+            <li><a href="#">Inventaires</a></li>
             <li><a href="#">Finance</a></li>
             <li><a href="#">Promotions</a></li>
             <li><a href="#">Copilot</a></li>
@@ -389,7 +389,7 @@
 
     <div class="chat-window" id="chatWindow">
         <div class="chat-header">
-            <span>Stellantis Chat</span>
+            <span>PUM Chat IA</span>
             <div class="chat-controls">
                 <button class="chat-control" id="expandChat">&#x26F6;</button>
                 <button class="chat-control" id="minimizeChat">_</button>
@@ -399,7 +399,7 @@
         <div class="chat-messages" id="chatMessages"></div>
         <div class="chat-input">
             <input type="text" id="chatInput" placeholder="Type your message...">
-            <button id="sendMessage">Send</button>
+            <button id="sendMessage">Envoyer</button>
         </div>
     </div>
 
@@ -413,7 +413,7 @@
         const minimizeChat = document.getElementById('minimizeChat');
         const expandChat = document.getElementById('expandChat');
         const closeChat = document.getElementById('closeChat');
-        chatId = '01999f48-ca2f-7dfb-bcff-b39c560d802b';
+        chatId = '019a4ad6-2505-7f57-889d-a6047d418655';
         // chatId = '';
 
         chatBot.addEventListener('click', toggleChat);
@@ -505,7 +505,7 @@
         async function fetchChatResponse(message) {
             const headers = {
                 'Content-Type': 'application/json',
-                'Authorization': 'Basic djA6dm1HdUE0SndQQmNnb2FjdVA3OWJiWUJV',
+                'Authorization': 'Basic djA6akNpZFhycDloZFZ6eklWeVpZcjZreWdr',
             };
 
             if (chatId) {
@@ -514,7 +514,7 @@
 
             try {
                 // console.log(chatId);
-                const response = await fetch('https://llm-connect.eu01.treasuredata.com/api/actions/01999afc-c19d-77f0-a36c-4c8b350cedf2/text', {
+                const response = await fetch('https://llm-connect.eu01.treasuredata.com/api/actions/019a4acf-ccbc-7840-89c2-2a0f60b71dbd/text', {
                     method: 'POST',
                     headers: headers,
                     body: JSON.stringify( message )
@@ -533,7 +533,7 @@
                 let done = false;
 
                 // Read chunks from the stream until done
-                appendMessage('Stellantis:', '');
+                appendMessage('PUM:', '');
                 while (!done) {
                     const { value, done: streamDone } = await reader.read();
                     done = streamDone;
@@ -545,11 +545,11 @@
                     }
                 }
                 appendMessage('', result);
-                const buttons = ["Profile Details", "Summary", "Purchase History", "Service History", "Browsing History", "Recommendations", "Sales Pitch", "Draft Email"];
+                const buttons = ["Profile Détaillé", "Summary", "Historique D'Achat", "Historique de Service", "Historique Navigation", "Recommendations", "Pitch Commercial", "Brouillon d'Email"];
                 suggestedButtons(buttons);
             } catch (error) {
                 console.log(error);
-                appendMessage('Stellantis:', 'Sorry, there was an error processing your request.' + error);
+                appendMessage('PUM:', 'Sorry, there was an error processing your request.' + error);
             }
         }
     </script>
